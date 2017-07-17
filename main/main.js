@@ -3,8 +3,7 @@ module.exports = function main() {
     console.log(`o) 最小值 = ${sequence.minimum()}
 o) 最大值 = ${sequence.maximum()}
 o) 元素数量 = ${sequence.length}
-o) 平均值 = ${sequence.average()}
-`);
+o) 平均值 = ${sequence.average()}`);
 };
 
 class Sequence {
@@ -16,7 +15,7 @@ class Sequence {
   }
 
   minimum() {
-      let min=this[0];
+      var min=this[0];
       for(let i=1;i<this.length;i++)
           if(min>this[i])
               min=this[i];
@@ -24,7 +23,7 @@ class Sequence {
   }
   
   maximum() {
-      let max=this[0];
+      var max=this[0];
       for(let i=1;i<this.length;i++)
           if(max<this[i])
               max=this[i];
@@ -32,7 +31,7 @@ class Sequence {
   }
   
   average(){
-      let ave=0;
+      var ave=0;
       for(let i=0;i<this.length;i++)
           ave=ave+this[i];
       ave=ave/this.length;
